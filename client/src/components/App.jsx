@@ -45,6 +45,13 @@ class App extends React.Component {
     return seconds;
   }
 
+  minutes(minutes) {
+    if (minutes < 10) {
+      return `0${minutes}`;
+    }
+    return minutes;
+  }
+
   render() {
     const { hours, minutes, seconds } = this.state;
 
@@ -53,7 +60,7 @@ class App extends React.Component {
         <div className="clockContainer">
           <div className="timeContainer">
           <div className="hoursAndMinutes">
-          {`${this.notMilitaryTime(hours)}:${minutes}`}
+          {`${this.notMilitaryTime(hours)}:${this.minutes(minutes)}`}
           </div>
           <div className="seconds">
             {`:${this.seconds(seconds)} ${this.ampm(hours)}`}
