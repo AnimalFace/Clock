@@ -6,9 +6,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Hours : null,
-      minutes : null,
-      seconds : null
+      hours : 11,
+      minutes : 11,
+      seconds : 11
     };
 
   }
@@ -50,7 +50,6 @@ class App extends React.Component {
 
     return (
       <Styles>
-        <h2>Digital Clock</h2>
         <div className="clockContainer">
           <div className="timeContainer">
           <div className="hoursAndMinutes">
